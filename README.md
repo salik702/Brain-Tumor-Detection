@@ -269,23 +269,55 @@ git push origin feature/your-improvement
 
 <div align="center">
 
-<h2>Salik Ahmad</h2>
-<h4>AI / ML Engineer · Deep Learning Developer</h4>
+<!-- Animated Name + Role Waving Footer Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:07111f,40:0d2137,70:0f4c75,100:07111f&height=200&section=footer&text=SALIK%20AHMAD&fontSize=52&fontColor=ffffff&animation=twinkling&fontAlignY=45&desc=AI%20%2F%20ML%20Engineer%20%E2%80%A2%20Deep%20Learning%20Developer&descAlignY=68&descSize=16&descColor=93c5fd" width="100%"/>
 
-<a href="https://salikahmad.vercel.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Website-salikahmad.vercel.app-38bdf8?style=for-the-badge&labelColor=07111f" />
-</a>
-<a href="https://www.linkedin.com/in/salik-ahmad-programmer/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&labelColor=07111f" />
-</a>
-<a href="https://www.kaggle.com/salikahmad702" target="_blank">
-  <img src="https://img.shields.io/badge/Kaggle-Notebooks-20BEFF?style=for-the-badge&labelColor=07111f" />
+<br/>
+
+<!-- Animated Typing Footer -->
+<a href="https://salikahmad.vercel.app/">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=16&duration=3000&pause=900&color=60A5FA&center=true&vCenter=true&repeat=true&width=820&height=45&lines=Building+AI+that+sees+what+humans+miss.;MRI+tumor+detection+via+deep+learning.;Streamlit+UI+%2B+Flask+API+%2B+Keras+CNN.;Visit+%E2%86%92+salikahmad.vercel.app" alt="Footer Typing" />
 </a>
 
 <br/><br/>
 
-<a href="https://salikahmad.vercel.app/">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=13&duration=4000&pause=1000&color=60A5FA&center=true&vCenter=true&repeat=true&width=780&height=40&lines=Detecting+tumors+from+MRI+scans+with+deep+learning.;Streamlit+UI+%2B+Flask+API+for+fast+medical+image+inference.;Built+for+local+use%2C+testing%2C+and+deployment." alt="Footer Typing" />
+<!-- Skill Capsules — always render, no username dependency -->
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:07111f,100:0f4c75&height=60&text=Python%20%20%7C%20%20TensorFlow%20%20%7C%20%20Keras%20%20%7C%20%20OpenCV&fontSize=18&fontColor=93c5fd&animation=fadeIn" width="80%"/>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:07111f,100:0f4c75&height=60&text=Streamlit%20%20%7C%20%20Flask%20%20%7C%20%20Deep%20Learning%20%20%7C%20%20Computer%20Vision&fontSize=18&fontColor=93c5fd&animation=fadeIn" width="80%"/>
+
+<br/><br/>
+
+<!-- Social Links — shields.io only, always reliable -->
+<a href="https://salikahmad.vercel.app/" target="_blank">
+  <img src="https://img.shields.io/badge/🌐%20Website-salikahmad.vercel.app-38bdf8?style=for-the-badge&labelColor=07111f&color=0f4c75" />
 </a>
+&nbsp;
+<a href="https://www.linkedin.com/in/salik-ahmad-programmer/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=07111f" />
+</a>
+&nbsp;
+<a href="https://www.kaggle.com/salikahmad702" target="_blank">
+  <img src="https://img.shields.io/badge/Kaggle-Notebooks-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white&labelColor=07111f" />
+</a>
+&nbsp;
+<a href="https://github.com/SalikAhmad702" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Profile-ffffff?style=for-the-badge&logo=github&logoColor=black&labelColor=07111f" />
+</a>
+
+<br/><br/>
+
+<!-- Static info badges — shields.io, no external API needed -->
+<img src="https://img.shields.io/badge/FOCUS-Deep%20Learning%20%2F%20AI-60a5fa?style=for-the-badge&labelColor=07111f" />
+&nbsp;
+<img src="https://img.shields.io/badge/DOMAIN-Medical%20Imaging-f97316?style=for-the-badge&labelColor=07111f" />
+&nbsp;
+<img src="https://img.shields.io/badge/STACK-Python%20%2F%20TensorFlow-22c55e?style=for-the-badge&labelColor=07111f" />
+
+<br/><br/>
+
+<sub>⭐ Star this repo if it helped you — it keeps the project alive and visible.</sub>
 
 </div>
