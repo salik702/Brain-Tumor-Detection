@@ -44,7 +44,6 @@ except Exception:
 import numpy as np
 import pandas as pd
 from PIL import Image, ImageOps
-from pydantic import BaseModel
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
 app = Flask(__name__) if IS_FLASK else None
