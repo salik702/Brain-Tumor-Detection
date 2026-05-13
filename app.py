@@ -33,7 +33,14 @@ except Exception:
     cross_origin = None
     IS_FLASK = False
 
-import cv2
+try:
+    import cv2
+
+    IS_CV2_AVAILABLE = True
+except Exception:
+    cv2 = None
+    IS_CV2_AVAILABLE = False
+
 import numpy as np
 import pandas as pd
 from PIL import Image, ImageOps
@@ -99,7 +106,14 @@ def preprocess_image(image):
         image = ImageOps.exif_transpose(image).convert("RGB")
         image = np.array(image)
 
-    image = cv2.resize(image, MODEL_INPUT_SIZE)
+    if IS_CV2_AVAILABLE:
+        image = cv2.resize(image, MODEL_INPUT_SIZE)
+    else:
+        image = Image.fromarray(np.asarray(image).astype("uint8")).resize(
+            MODEL_INPUT_SIZE, Image.BILINEAR
+        )
+        image = np.array(image)
+
     return image.astype("float32") / 255.0
 
 
@@ -139,9 +153,15 @@ def predict_image_result(image):
 
 def get_cv2_image_from_base64_string(b64str):
     encoded_data = b64str.split(",")[1]
-    nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
-    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    return img
+
+    if IS_CV2_AVAILABLE:
+        nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
+        return cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+
+    image_data = BytesIO(base64.b64decode(encoded_data))
+    pil_img = Image.open(image_data)
+    pil_img = ImageOps.exif_transpose(pil_img).convert("RGB")
+    return np.array(pil_img)
 
 
 def get_image_from_base64_string(b64str):
