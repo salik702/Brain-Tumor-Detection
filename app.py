@@ -20,8 +20,19 @@ def _prepend_local_venv_site_packages():
 
 _prepend_local_venv_site_packages()
 
-from flask import Flask, json, request
-from flask_cors import CORS, cross_origin
+try:
+    from flask import Flask, json, request
+    from flask_cors import CORS, cross_origin
+
+    IS_FLASK = True
+except Exception:
+    Flask = None
+    json = None
+    request = None
+    CORS = None
+    cross_origin = None
+    IS_FLASK = False
+
 import cv2
 import numpy as np
 import pandas as pd
@@ -29,9 +40,10 @@ from PIL import Image, ImageOps
 from pydantic import BaseModel
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
-app = Flask(__name__)
-cors = CORS(app)
-app.config["CORS_HEADERS"] = "Content-Type"
+app = Flask(__name__) if IS_FLASK else None
+if IS_FLASK:
+    cors = CORS(app)
+    app.config["CORS_HEADERS"] = "Content-Type"
 STREAMLIT_CONTEXT = False
 
 try:
@@ -139,12 +151,10 @@ def get_image_from_base64_string(b64str):
     return img
 
 
-@app.route("/home", methods=["GET"])
 def home():
     return "Hello World"
 
 
-@app.route("/", methods=["POST"])
 def read_root():
     data = json.loads(request.data)
     predict_img = [get_cv2_image_from_base64_string(item) for item in data["image"]]
@@ -156,6 +166,26 @@ def read_root():
     # print(result)
 
     return {"result": prediction[:, 1].tolist()}
+
+
+if IS_FLASK:
+
+    @app.route("/home", methods=["GET"])
+    def home():
+        return "Hello World"
+
+    @app.route("/", methods=["POST"])
+    def read_root():
+        data = json.loads(request.data)
+        predict_img = [get_cv2_image_from_base64_string(item) for item in data["image"]]
+        prediction = predict_images(predict_img)
+        result = np.argmax(prediction, axis=1)
+
+        # make the probablity frtom prediction
+        # print(prediction[:,1])
+        # print(result)
+
+        return {"result": prediction[:, 1].tolist()}
 
 
 if STREAMLIT_CONTEXT:
