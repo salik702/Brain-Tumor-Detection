@@ -24,7 +24,38 @@
   <img src="https://img.shields.io/badge/DEPLOYMENT-LOCAL%20%2F%20RENDER-14b8a6?style=for-the-badge&logo=render&logoColor=white&labelColor=07111f" />
 </p>
 
+<br/>
+
+<!-- Live Preview Button -->
+<a href="https://brain-tumor-detection-salik702.streamlit.app/" target="_blank">
+  <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-CLICK%20TO%20LAUNCH%20APP-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white&labelColor=07111f" />
+</a>
+
 </div>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%"/>
+
+## `> LIVE.PREVIEW — TRY IT NOW`
+
+<div align="center">
+
+<a href="https://brain-tumor-detection-salik702.streamlit.app/" target="_blank">
+  <img src="https://img.shields.io/badge/%E2%9A%A1%20STREAMLIT%20APP-brain--tumor--detection--salik702.streamlit.app-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white&labelColor=07111f" />
+</a>
+
+<br/><br/>
+
+> 🧠 **Upload any MRI brain scan and get an instant prediction — No Tumor or Pituitary Tumor — directly in your browser. No installation required.**
+
+| `ACTION` | `LINK` |
+| :------: | :----- |
+| 🌐 Open Live App | [brain-tumor-detection-salik702.streamlit.app](https://brain-tumor-detection-salik702.streamlit.app/) |
+| 📤 Upload MRI | Drag & drop your `.jpg` / `.png` MRI scan |
+| 🎯 Get Prediction | Receive class label + confidence score instantly |
+
+</div>
+
+<br/>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%"/>
 
