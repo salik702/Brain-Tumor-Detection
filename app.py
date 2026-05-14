@@ -10,12 +10,16 @@ import sys
 
 def _prepend_local_venv_site_packages():
     project_root = Path(__file__).resolve().parent
-    venv_site_packages = project_root / "brain_tumor_env" / "Lib" / "site-packages"
+    candidate_site_packages = [
+        project_root / ".venv" / "Lib" / "site-packages",
+        project_root / "brain_tumor_env" / "Lib" / "site-packages",
+    ]
 
-    if venv_site_packages.exists():
-        site_packages_path = str(venv_site_packages)
-        if site_packages_path not in sys.path:
-            sys.path.insert(0, site_packages_path)
+    for venv_site_packages in candidate_site_packages:
+        if venv_site_packages.exists():
+            site_packages_path = str(venv_site_packages)
+            if site_packages_path not in sys.path:
+                sys.path.insert(0, site_packages_path)
 
 
 _prepend_local_venv_site_packages()
