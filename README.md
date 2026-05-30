@@ -59,6 +59,12 @@
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%"/>
 
+
+
+https://github.com/user-attachments/assets/1a58b731-90c2-4537-9a2f-6690e5b69752
+
+
+
 ## `> SYSTEM.INIT — WHAT IS THIS PROJECT?`
 
 **Brain Tumor Detection** is a deep learning web application for classifying MRI images into two categories: **No Tumor** and **Pituitary Tumor**. The project combines a trained Keras model with a polished Streamlit interface and a Flask-based prediction API, so it can be used both as an interactive app and as a backend service.
