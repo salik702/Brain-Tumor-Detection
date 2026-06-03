@@ -49,13 +49,7 @@ pip-selfcheck.json
 *.pth
 *.ckpt
 
-# --- Datasets & Data Folders ---
-# (Exclude raw/processed datasets to keep repo lightweight and avoid storage limits)
-Brain_Tumor_Data/
-data/
-dataset/
-datasets/
-temp_data/
+
 
 # --- Node / Frontend (React Client) ---
 node_modules/
