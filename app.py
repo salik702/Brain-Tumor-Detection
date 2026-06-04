@@ -888,30 +888,20 @@ if STREAMLIT_CONTEXT:
                     "Session history", str(len(st.session_state["prediction_history"]))
                 )
 
-                st.markdown(
-                    f"""
-                    <div class="confidence-card">
-                        <div class="confidence-head">
-                            <div>
-                                <p class="confidence-title">Probability chart</p>
-                                <div class="confidence-score">Class scores</div>
-                            </div>
-                        </div>
-                        {format_probability_rows(latest_prediction["probabilities"])}
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-
-                chart_df = pd.DataFrame(
-                    {
-                        "Class": LABEL_NAMES,
-                        "Confidence": [
-                            float(item) for item in latest_prediction["probabilities"]
-                        ],
-                    }
-                ).set_index("Class")
-                st.bar_chart(chart_df, use_container_width=True)
+                st.markdown("### Probability chart")
+                st.caption("Class scores")
+                for label, probability in zip(
+                    LABEL_NAMES, latest_prediction["probabilities"]
+                ):
+                    left_col, right_col = st.columns([8, 2])
+                    with left_col:
+                        st.markdown(f"**{label}**")
+                        st.progress(float(probability))
+                    with right_col:
+                        st.markdown(
+                            f"<div style='padding-top: 1.55rem; text-align: right;'>{probability * 100:.1f}%</div>",
+                            unsafe_allow_html=True,
+                        )
             else:
                 st.markdown(
                     """
